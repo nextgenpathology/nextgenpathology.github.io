@@ -123,12 +123,12 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              {/* Exact AditYa Laboratory Logo */}
+              {/* Updated Aditya Laboratory Logo - Doubled size from h-12 to h-24 */}
               <div className="mr-4">
                 <img 
-                  src="/image.png" 
+                  src="/Logo2-removebg-preview.png" 
                   alt="Aditya Laboratory Logo" 
-                  className="h-16 w-auto"
+                  className="h-24 w-auto"
                 />
               </div>
             </div>
@@ -140,7 +140,7 @@ function App() {
               <a href="#packages" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Health Packages</a>
               <a href="#about" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">About</a>
               <a href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Contact</a>
-              <button className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium">
+              <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 font-medium shadow-lg">
                 Book Test
               </button>
             </nav>
@@ -163,7 +163,7 @@ function App() {
                 <a href="#packages" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Health Packages</a>
                 <a href="#about" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">About</a>
                 <a href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Contact</a>
-                <button className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium w-fit">
+                <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 font-medium w-fit shadow-lg">
                   Book Test
                 </button>
               </div>
@@ -173,17 +173,17 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-br from-orange-50 via-white to-red-50 py-20">
+      <section id="home" className="relative bg-gradient-to-br from-orange-50 via-white to-blue-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="inline-block bg-gradient-to-r from-orange-100 to-blue-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
                   Quality Assured Laboratory
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
                   Trusted Diagnostics,
-                  <span className="text-orange-600"> Accurate Results</span>
+                  <span className="bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent"> Accurate Results</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Leading diagnostic laboratory in Kolhapur providing comprehensive pathology services 
@@ -192,7 +192,7 @@ function App() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-orange-600 text-white px-8 py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl flex items-center justify-center">
+                <button className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl flex items-center justify-center">
                   <Calendar className="h-5 w-5 mr-2" />
                   Book Appointment
                 </button>
@@ -204,7 +204,7 @@ function App() {
                   <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-600">500+</div>
+                  <div className="text-3xl font-bold text-blue-600">500+</div>
                   <div className="text-sm text-gray-600">Tests Available</div>
                 </div>
                 <div className="text-center">
@@ -235,9 +235,9 @@ function App() {
                 </div>
               </div>
               
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-orange-100">
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-blue-100">
                 <div className="flex items-center space-x-3">
-                  <Clock className="h-8 w-8 text-green-600" />
+                  <Clock className="h-8 w-8 text-blue-600" />
                   <div>
                     <div className="font-semibold text-gray-900">Same Day</div>
                     <div className="text-sm text-gray-600">Quick Reports</div>
@@ -264,8 +264,8 @@ function App() {
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-orange-100 group hover:-translate-y-2">
                 <div className="mb-6">
-                  <div className="bg-orange-100 rounded-full p-3 w-fit group-hover:bg-orange-200 transition-colors">
-                    <service.icon className="h-8 w-8 text-orange-600" />
+                  <div className={`${index % 2 === 0 ? 'bg-orange-100 group-hover:bg-orange-200' : 'bg-blue-100 group-hover:bg-blue-200'} rounded-full p-3 w-fit transition-colors`}>
+                    <service.icon className={`h-8 w-8 ${index % 2 === 0 ? 'text-orange-600' : 'text-blue-600'}`} />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -278,7 +278,7 @@ function App() {
                     </li>
                   ))}
                 </ul>
-                <button className="mt-6 w-full bg-orange-50 text-orange-600 py-3 rounded-lg hover:bg-orange-100 transition-colors font-medium">
+                <button className={`mt-6 w-full ${index % 2 === 0 ? 'bg-orange-50 text-orange-600 hover:bg-orange-100' : 'bg-blue-50 text-blue-600 hover:bg-blue-100'} py-3 rounded-lg transition-colors font-medium`}>
                   View Details
                 </button>
               </div>
@@ -288,7 +288,7 @@ function App() {
       </section>
 
       {/* Health Packages Section */}
-      <section id="packages" className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+      <section id="packages" className="py-20 bg-gradient-to-br from-orange-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Health Check-up Packages</h2>
@@ -301,13 +301,13 @@ function App() {
             {healthPackages.map((pkg, index) => (
               <div key={index} className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${index === 1 ? 'border-orange-200 transform scale-105' : 'border-gray-100'} group hover:-translate-y-2`}>
                 {index === 1 && (
-                  <div className="bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold text-center mb-4">
+                  <div className="bg-gradient-to-r from-orange-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold text-center mb-4">
                     Most Popular
                   </div>
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <div className="text-4xl font-bold text-orange-600 mb-2">{pkg.price}</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent mb-2">{pkg.price}</div>
                   <div className="text-gray-600">{pkg.tests}</div>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -318,7 +318,7 @@ function App() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-4 rounded-lg font-semibold text-lg transition-colors ${index === 1 ? 'bg-orange-600 text-white hover:bg-orange-700' : 'bg-orange-50 text-orange-600 hover:bg-orange-100'}`}>
+                <button className={`w-full py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${index === 1 ? 'bg-gradient-to-r from-orange-500 to-blue-500 text-white hover:from-orange-600 hover:to-blue-600 shadow-lg' : 'bg-gradient-to-r from-orange-50 to-blue-50 text-orange-600 hover:from-orange-100 hover:to-blue-100'}`}>
                   Book Package
                 </button>
               </div>
@@ -340,9 +340,9 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-orange-100">
-                  <div className="bg-orange-100 rounded-full p-4 w-fit mx-auto mb-6 group-hover:bg-orange-200 transition-colors">
-                    <feature.icon className="h-8 w-8 text-orange-600" />
+                <div className="bg-gradient-to-br from-orange-50 via-white to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-orange-100">
+                  <div className={`${index % 2 === 0 ? 'bg-orange-100 group-hover:bg-orange-200' : 'bg-blue-100 group-hover:bg-blue-200'} rounded-full p-4 w-fit mx-auto mb-6 transition-colors`}>
+                    <feature.icon className={`h-8 w-8 ${index % 2 === 0 ? 'text-orange-600' : 'text-blue-600'}`} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{feature.description}</p>
@@ -354,7 +354,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gradient-to-br from-orange-100 to-red-100">
+      <section id="about" className="py-20 bg-gradient-to-br from-orange-100 via-white to-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-8">About Us</h2>
@@ -380,10 +380,10 @@ function App() {
             </div>
 
             {/* Our Expertise */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-200">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-200">
               <div className="flex items-center mb-6">
-                <div className="bg-orange-100 rounded-lg p-3 mr-4">
-                  <Cloud className="h-8 w-8 text-orange-600" />
+                <div className="bg-blue-100 rounded-lg p-3 mr-4">
+                  <Cloud className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Our Expertise</h3>
               </div>
@@ -398,7 +398,7 @@ function App() {
             {/* Our Dedication */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-200">
               <div className="flex items-center mb-6">
-                <div className="bg-orange-100 rounded-lg p-3 mr-4">
+                <div className="bg-gradient-to-r from-orange-100 to-blue-100 rounded-lg p-3 mr-4">
                   <Home className="h-8 w-8 text-orange-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Our Dedication</h3>
@@ -420,7 +420,7 @@ function App() {
                   <div className="text-gray-600">Years of Excellence</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-red-600 mb-2">500+</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
                   <div className="text-gray-600">Diagnostic Tests</div>
                 </div>
                 <div className="text-center">
@@ -428,7 +428,7 @@ function App() {
                   <div className="text-gray-600">Patients Served</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">100%</div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
                   <div className="text-gray-600">Quality Assured</div>
                 </div>
               </div>
@@ -449,7 +449,7 @@ function App() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 shadow-lg border border-orange-100">
+              <div className="bg-gradient-to-br from-orange-50 via-white to-blue-50 rounded-2xl p-8 shadow-lg border border-orange-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
                 
                 <div className="space-y-6">
@@ -471,9 +471,8 @@ function App() {
                       <Phone className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Phone Numbers</h4>
-                      <p className="text-gray-600">+91 231 2471234</p>
-                      <p className="text-gray-600">+91 9876543210</p>
+                      <h4 className="font-semibold text-gray-900 mb-1">Phone Number</h4>
+                      <p className="text-gray-600">+91 231 2522981</p>
                     </div>
                   </div>
 
@@ -494,17 +493,16 @@ function App() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Working Hours</h4>
-                      <p className="text-gray-600">Monday - Saturday: 7:00 AM - 9:00 PM</p>
-                      <p className="text-gray-600">Sunday: 8:00 AM - 6:00 PM</p>
+                      <p className="text-gray-600">Monday - Saturday: 9:00 AM - 7:00 PM</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 shadow-lg border border-orange-100">
+              <div className="bg-gradient-to-br from-orange-50 via-white to-blue-50 rounded-2xl p-8 shadow-lg border border-orange-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h3>
                 <div className="grid grid-cols-1 gap-4">
-                  <button className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition-colors font-medium flex items-center justify-center">
+                  <button className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 font-medium flex items-center justify-center shadow-lg">
                     <Calendar className="h-5 w-5 mr-2" />
                     Book Test
                   </button>
@@ -529,7 +527,7 @@ function App() {
                 ></iframe>
               </div>
               
-              <div className="mt-6 p-4 bg-orange-50 rounded-lg">
+              <div className="mt-6 p-4 bg-gradient-to-r from-orange-50 to-blue-50 rounded-lg">
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-orange-600 flex-shrink-0" />
                   <div>
@@ -545,21 +543,22 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center">
+                {/* Footer logo - Doubled size from h-12 to h-24 */}
                 <img 
-                  src="/image.png" 
+                  src="/Logo2-dark-removebg-preview.png" 
                   alt="Aditya Laboratory Logo" 
-                  className="h-10 w-auto mr-3 filter brightness-0 invert"
+                  className="h-24 w-auto mr-3"
                 />
               </div>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 Your trusted diagnostic partner in Kolhapur, committed to accuracy, quality, and exceptional patient care since 1989.
               </p>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-gray-300">
                 <p>Quality Assured Laboratory</p>
                 <p>ISO 15189:2012 Certified</p>
               </div>
@@ -567,7 +566,7 @@ function App() {
             
             <div>
               <h3 className="text-lg font-semibold mb-4 text-orange-400">Quick Links</h3>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="space-y-2 text-gray-300">
                 <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
                 <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="#packages" className="hover:text-white transition-colors">Health Packages</a></li>
@@ -577,8 +576,8 @@ function App() {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-orange-400">Our Services</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="text-lg font-semibold mb-4 text-blue-400">Our Services</h3>
+              <ul className="space-y-2 text-gray-300">
                 <li>Clinical Biochemistry</li>
                 <li>Hematology</li>
                 <li>Microbiology</li>
@@ -590,8 +589,8 @@ function App() {
             
             <div>
               <h3 className="text-lg font-semibold mb-4 text-orange-400">Contact Info</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>+91 231 2471234</li>
+              <ul className="space-y-2 text-gray-300">
+                <li>+91 231 2522981</li>
                 <li>info@aditya-lab.com</li>
                 <li>1126/E Thakur Complex</li>
                 <li>Shahupuri, Kolhapur - 416001</li>
@@ -599,7 +598,7 @@ function App() {
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
             <p>&copy; 2024 Aditya Laboratory. All rights reserved. | Quality Assured Diagnostic Laboratory</p>
           </div>
         </div>
